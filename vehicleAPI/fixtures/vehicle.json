@@ -1,7 +1,7 @@
 [
     {
         "model": "vehicleAPI.vehicle",
-        "pk": "DG42F41A‌",
+        "pk": "DG42F41A",
         "fields": {
             "Mileage": "12331",
             "Manufacturer": "Ford",
@@ -10,7 +10,7 @@
     },
     {
         "model": "vehicleAPI.vehicle",
-        "pk": "F1AEJ13A‌",
+        "pk": "F1AEJ13A",
         "fields": {
             "Mileage": "35459",
             "Manufacturer": "GMC",
@@ -19,7 +19,7 @@
     },
     {
         "model": "vehicleAPI.vehicle",
-        "pk": "S7J2A6G3‌",
+        "pk": "S7J2A6G3",
         "fields": {
             "Mileage": "53424",
             "Manufacturer": "Ford",

@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import datetime
 
 # Create your models here.
 class Vehicle(models.Model):
@@ -17,12 +18,13 @@ class Vehicle(models.Model):
 
 #   python manage.py loaddata vehicle - this is to load the fixture
 class VehicleDistanceLog(models.Model):
-    Unit = models.ForeignKey(Vehicle, on_delete=models.CASCADE)
+    Unit = models.ForeignKey(Vehicle, related_name="distances", on_delete=models.CASCADE)
     CumilativeDistance = models.IntegerField()
     LogDate = models.DateField()
 
     def __str__(self):
-        return self.Date + " " + self.CumilativeDistance
+        return "Date: " + str(self.LogDate) + " Distance: " + str(self.CumilativeDistance) + "Kms"
 
     class Meta:
-        unique_together = (('Unit', 'LogDate'),)
+        unique_together = (('Unit', 'LogDate'))
+        

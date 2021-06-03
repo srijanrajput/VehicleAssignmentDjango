@@ -7,3 +7,5 @@
 
 # Local History for Visual Studio Code
 .history/
+# .vehicleAPI/__pycache__/*
+# vehicleAPI/__pycache__/admin.cpython-38.pyc
