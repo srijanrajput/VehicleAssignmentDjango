@@ -16,7 +16,7 @@ class Vehicle(models.Model):
 
 
 
-#   python manage.py loaddata vehicle - this is to load the fixture
+
 class VehicleDistanceLog(models.Model):
     Unit = models.ForeignKey(Vehicle, related_name="distances", on_delete=models.CASCADE)
     CumilativeDistance = models.IntegerField()
