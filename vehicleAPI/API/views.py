@@ -8,6 +8,13 @@ from django.http.response import JsonResponse
 from datetime import datetime, timedelta
 from django.db.models import Max
 
+@api_view(['GET'])
+def vehicle_list(request):
+     if request.method == 'GET': 
+        vehicles = Vehicle.objects.all()
+        vehicles = VehicleSerializer(vehicles, many=True)
+        return JsonResponse(vehicles.data, safe=False)
+
 @api_view(['GET', 'PATCH'])
 def vehicle_detail(request, pk, date = ''):
     if request.method == 'GET': 
